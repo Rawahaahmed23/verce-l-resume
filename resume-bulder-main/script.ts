@@ -46,7 +46,8 @@ form.addEventListener('submit', async (event: Event) => {
   const experienceInput = (document.getElementById('experience') as HTMLTextAreaElement).value;
 
   const photoFile = profilePictureInput.files ? profilePictureInput.files[0] : null;
-  let photoBase64 = '';
+
+  let photoBase64:any = '';
 
   if (photoFile) {
     photoBase64 = await fileToBase64(photoFile);
